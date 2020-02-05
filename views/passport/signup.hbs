@@ -1,0 +1,51 @@
+<h2>Signup</h2>
+
+<form action="/signup" method="POST" id="form-container">
+  <label for="name">Name</label>
+  <input id="name" type="text" name="name" placeholder="User" />
+  <br /><br />
+  <label for="email">Email</label>
+  <input id="email" type="email" name="email" placeholder="Email" />
+  <br /><br />
+  <label for="nativeLanguage">Native Language</label>
+  <input id="nativeLanguage" type="text" name="nativeLanguage" placeholder="Native Language" />
+  <br /><br />
+  <label for="wantToPractice">Language to practice</label>
+  <input id="wantToPractice" type="text" name="wantToPractice" placeholder="Language to practice" />
+  <br /><br />
+  <label for="selection">Choose three interests from the list below:</label>
+  <br /><br />
+  <select name="interestOne">
+    <option value="" disabled selected>Select your option</option>
+    <option value="movies">Movies</option>
+    <option value="videogames">Videogames</option>
+    <option value="gossipAndMedia">Gossip and Media</option>
+  </select>
+    <select name="interestTwo">
+          <option value="" disabled selected>Select your option</option>
+    <option value="sports">Sports</option>
+    <option value="traveling">Traveling</option>
+    <option value="outdoorsActivities">Outdoors activities</option>
+  </select>
+    <select name="interestThree">
+    <option value="" disabled selected>Select your option</option>
+    <option value="technology">Technology</option>
+    <option value="gadgets">Gadgets</option>
+    <option value="scienceAndUniverse">Science and Universe</option>
+  </select>
+  <br /><br />
+  <label for="password">Password</label>
+  <input id="password" type="password" name="password" placeholder="Your password" />
+
+  {{#if message}}
+  <div class="error-message">{{ message }}</div>
+  {{/if}}
+  <br><br>
+
+  <button>Create account</button>
+
+  <p class="account-message">
+    Do you already have an account?
+    <a href="/login">Login</a>
+  </p>
+</form>

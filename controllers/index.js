@@ -32,3 +32,20 @@ exports.logout = (req, res) => {
   req.logout();
   res.redirect("/login");
 };
+
+exports.isMatching = async (req, res) => {
+  const userLogged = req.user.wantToPractice
+  const userNativeLanguage = await User.findOne({ nativeLanguage: userLogged })
+  console.log(req.user)
+  console.log(userNativeLanguage)
+  res.render("passport/profile", userLogged, userNativeLanguage)  
+}
+//  const userNativeLanguage = await User.findOne({ nativeLanguage: userLogged })
+
+/*
+const userLogged = await User.findOneById({ _id })
+  const userPractice = await User.findOne({ wantToPractice });
+  if(userLogged == userPractice) {
+    
+  }
+  */

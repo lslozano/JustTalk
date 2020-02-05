@@ -9,6 +9,7 @@ const {
 signupView,
 signup,
 loginView,
+isMatching,
 logout} = require('../controllers/index')
 
 
@@ -22,16 +23,18 @@ passportRouter.get('/login', loginView)
 passportRouter.post(
   "/login",
   passport.authenticate("local", {
-    successRedirect: "/private-page",
+    successRedirect: "/profile",
     failureRedirect: "/login",
     failureFlash: true
   })
 );
 
+passportRouter.get('/profile', isMatching)
+
 // Logout Route
 
-passportRouter.get("/private-page", ensureLogin, (req, res) => {
-  res.render("passport/private", { user: req.user });
+passportRouter.get("/profile", ensureLogin, async (req, res) => {
+  res.render("passport/profile", { user: req.user });
 });
 
 function ensureLogin(req, res, next) {
@@ -42,3 +45,9 @@ passportRouter.get("/logout", logout)
 
 module.exports = passportRouter;
 
+/*
+  const userLogged = await req.user.wantToPractice
+  const userNativeLanguage = await User.findOne({ nativeLanguage: userLogged })
+  console.log(req.user)
+  console.log(userNativeLanguage)
+  */

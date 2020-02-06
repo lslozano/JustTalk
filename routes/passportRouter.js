@@ -29,7 +29,7 @@ passportRouter.post(
   })
 );
 
-passportRouter.get('/profile', isMatching)
+passportRouter.get('passport/profile', isMatching)
 
 // Logout Route
 

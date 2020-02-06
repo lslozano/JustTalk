@@ -36,9 +36,9 @@ exports.logout = (req, res) => {
 exports.isMatching = async (req, res) => {
   const userLogged = req.user.wantToPractice
   const userNativeLanguage = await User.findOne({ nativeLanguage: userLogged })
-  console.log(req.user)
+  console.log(userLogged)
   console.log(userNativeLanguage)
-  res.render("passport/profile", userLogged, userNativeLanguage)  
+  res.render("/passport/profile", userNativeLanguage)  
 }
 //  const userNativeLanguage = await User.findOne({ nativeLanguage: userLogged })
 

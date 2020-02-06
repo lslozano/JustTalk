@@ -1,8 +1,160 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
-a {
-  color: #00B7FF;
+.mainLanding {
+  background-color: white;
+  block-size: 75vh;
+  inline-size: auto;
+  inline-size: 92vw
+}
+
+.justTalkTitle {
+  margin-top: 0;
+  font-size: 3em;
+  padding-inline-start: 10vw;
+  padding-block-start: 10vh;
+  color: #03DAC4
+}
+
+.justTalkInfo {
+  font-size: 1.6em;
+  padding-inline-start: 10vw;
+  padding-inline-end: 10vw;
+  padding-block-start: 1vh;
+  color: black
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  block-size: 15vh;
+  background-color: #6200EE
+}
+
+.justTalk {
+  color: #03DAC4;
+  font-size: 2em;
+}
+
+.signNav > a {
+  color: white;
+}
+
+.logNav > a {
+  color: white;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  padding-left: 0
+}
+
+
+.list > li {
+  list-style-type: none;
+  padding: 5vw;
+}
+
+li > a {
+  text-decoration: none;
+}
+
+.logInP {
+  margin-bottom: 0;
+}
+
+.signP > a {
+  text-decoration: none;
+}
+
+.logInP > a {
+  text-decoration: none;
+}
+
+.signLog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #6200EE;
+  margin-bottom: 0;
+}
+
+.logInP {
+  margin-inline-start: 10vw;
+}
+
+.signP {
+  color: white;
+}
+
+.logInP {
+  color: white;
+}
+
+.signP > a {
+  color: white;
+}
+
+.logInP > a {
+  color: white;
+}
+
+.signUpTitle {
+  margin-top: 0;
+  font-size: 3em;
+  color: #03DAC4;
+  background-color: #6200EE
+}
+
+.form {
+  color: #6200EE;
+}
+
+.form > input {
+  border-bottom: 0.5px solid gray;
+}
+
+.account-message > a {
+  text-decoration: none;
+}
+
+.createAccount {
+  height: 40px;
+  width: 60x;
+  background-color: #03DAC4;
+  color: white;
+}
+
+.loginSite {
+  margin-top: 0;
+  font-size: 3em;
+  color: #03DAC4;
+  background-color: #6200EE
+}
+
+.loginForm {
+  color: #6200EE;
+}
+
+.loginButton {
+  height: 40px;
+  width: 60x;
+  background-color: #03DAC4;
+  color: white;
+}
+
+.loginForm > input {
+  border-bottom: 0.5px solid gray;
+}
+
+.confirm-button {
+
+  height: 40px;
+  width: 60x;
+  background-color: #03DAC4;
+  color: white;
 }
